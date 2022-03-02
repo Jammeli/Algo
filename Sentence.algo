@@ -1,0 +1,25 @@
+ALGORITHM sentence 
+VAR 
+    sent:STRING;
+    a: INTEGER:=1;
+    b: INTEGER:=0;
+    i: INTEGER;
+BEGIN
+    Repeat 
+        Read(sent)
+    Until(sent[length(sent)]='.');
+    Write(sent);
+    Write ("The length of the sentence is", length(sent));
+    FOR i FROM 0 TO LENGHT(sent) DO
+    IF (sent[i]='' AND sent[i+1]!='.') THEN
+        a:=a+1;
+    END_IF
+    IF (sent[i] in ['a','e','i','o','u','y','A','E','I','O','U','Y') THEN
+        b:=b+1;
+    END_IF
+    END_FOR
+    Write ("The number of words in the sentence is",a);
+    Write ("The number of vowels in the sentence is",b);
+END
+    ))
+    
